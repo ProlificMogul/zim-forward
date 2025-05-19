@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZimForward - Zimbabwe Development Forum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .flag-stripe {
+            height: 8px;
+            background: linear-gradient(90deg, 
+                #FFD700 33%, 
+                #FF0000 33%, 
+                #FF0000 66%, 
+                #000000 66%, 
+                #000000 100%);
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .category-badge {
+            transition: all 0.2s ease;
+        }
+        .category-badge:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+    <!-- Flag Stripe -->
+    <div class="flag-stripe w-full"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-lion text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">
+                        <span class="text-yellow-600">Zim</span><span class="text-red-600">Forward</span>
+                    </h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-yellow-600 font-medium">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-600 font-medium">Sectors</a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-600 font-medium">Ideas</a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-600 font-medium">Resources</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-full font-medium transition">
+                        Sign Up
+                    </button>
+                    <button class="text-gray-700 hover:text-yellow-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Shaping <span class="text-yellow-600">Zimbabwe's</span> Future Together
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    A platform for Zimbabweans to share ideas, discuss solutions, and collaborate on building a better nation across all sectors.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded-full font-medium transition flex items-center justify-center space-x-2">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Share Your Idea</span>
+                    </button>
+                    <button class="bg-white hover:bg-gray-100 text-gray-800 border border-gray-300 px-6 py-3 rounded-full font-medium transition flex items-center justify-center space-x-2">
+                        <i class="fas fa-search"></i>
+                        <span>Explore Discussions</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Categories Section -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Browse by Sector</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Healthcare -->
+                <a href="#" class="category-badge bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-hospital text-red-500 text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700">Healthcare</span>
+                </a>
+                
+                <!-- Infrastructure -->
+                <a href="#" class="category-badge bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-road text-blue-500 text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700">Infrastructure</span>
+                </a>
+                
+                <!-- Energy -->
+                <a href="#" class="category-badge bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-bolt text-yellow-500 text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700">Energy</span>
+                </a>
+                
+                <!-- Education -->
+                <a href="#" class="category-badge bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-graduation-cap text-green-500 text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700">Education</span>
+                </a>
+                
+                <!-- Agriculture -->
+                <a href="#" class="category-badge bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-tractor text-emerald-500 text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700">Agriculture</span>
+                </a>
+                
+                <!-- Economy -->
+                <a href="#" class="category-badge bg-white rounded-lg shadow-sm p-4 text-center hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                        <i class="fas fa-chart-line text-purple-500 text-xl"></i>
+                    </div>
+                    <span class="font-medium text-gray-700">Economy</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Discussion Feed -->
+        <section>
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Recent Discussions</h3>
+                <div class="flex space-x-2">
+                    <button class="bg-white border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-filter mr-2"></i> Filter
+                    </button>
+                    <button class="bg-white border border-gray-300 px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50">
+                        <i class="fas fa-sort mr-2"></i> Sort
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post Card 1 -->
+            <div class="post-card bg-white rounded-lg shadow-sm p-6 mb-6 transition hover:shadow-md">
+                <div class="flex items-start mb-4">
+                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-purple-600 font-medium">TP</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center">
+                            <span class="font-medium text-gray-800 mr-2">TownPlanner42</span>
+                            <span class="text-xs text-gray-500">2 hours ago</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <span class="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">Infrastructure</span>
+                            <span class="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded">Urban Planning</span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">Revitalizing Harare's CBD - A 10-Year Plan</h4>
+                <p class="text-gray-600 mb-4">
+                    I've been studying urban renewal projects in other African cities like Kigali and Nairobi. Here's a comprehensive proposal for transforming Harare's city center with pedestrian zones, green spaces, and mixed-use developments while preserving our architectural heritage...
+                </p>
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-4 text-gray-500">
+                        <button class="flex items-center hover:text-yellow-600">
+                            <i class="far fa-comment mr-1"></i>
+                            <span>24</span>
+                        </button>
+                        <button class="flex items-center hover:text-red-500">
+                            <i class="far fa-heart mr-1"></i>
+                            <span>56</span>
+                        </button>
+                        <button class="flex items-center hover:text-blue-500">
+                            <i class="fas fa-share-alt mr-1"></i>
+                        </button>
+                    </div>
+                    <button class="text-yellow-600 hover:text-yellow-700 font-medium">
+                        Read More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post Card 2 -->
+            <div class="post-card bg-white rounded-lg shadow-sm p-6 mb-6 transition hover:shadow-md">
+                <div class="flex items-start mb-4">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-green-600 font-medium">MD</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center">
+                            <span class="font-medium text-gray-800 mr-2">MedStudentZim</span>
+                            <span class="text-xs text-gray-500">5 hours ago</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <span class="bg-red-100 text-red-600 text-xs px-2 py-1 rounded">Healthcare</span>
+                            <span class="bg-emerald-100 text-emerald-600 text-xs px-2 py-1 rounded">Technology</span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">Telemedicine for Rural Zimbabwe - A Low-Cost Solution</h4>
+                <p class="text-gray-600 mb-4">
+                    After my rural attachment, I realized how many people travel 50+ km just to see a nurse. We could implement a basic telemedicine system using simple smartphones and trained community health workers. Here's how it could work with minimal infrastructure requirements...
+                </p>
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-4 text-gray-500">
+                        <button class="flex items-center hover:text-yellow-600">
+                            <i class="far fa-comment mr-1"></i>
+                            <span>18</span>
+                        </button>
+                        <button class="flex items-center hover:text-red-500">
+                            <i class="far fa-heart mr-1"></i>
+                            <span>42</span>
+                        </button>
+                        <button class="flex items-center hover:text-blue-500">
+                            <i class="fas fa-share-alt mr-1"></i>
+                        </button>
+                    </div>
+                    <button class="text-yellow-600 hover:text-yellow-700 font-medium">
+                        Read More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Post Card 3 -->
+            <div class="post-card bg-white rounded-lg shadow-sm p-6 mb-6 transition hover:shadow-md">
+                <div class="flex items-start mb-4">
+                    <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-orange-600 font-medium">EE</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center">
+                            <span class="font-medium text-gray-800 mr-2">EnergyEngineer</span>
+                            <span class="text-xs text-gray-500">1 day ago</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <span class="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded">Energy</span>
+                            <span class="bg-amber-100 text-amber-600 text-xs px-2 py-1 rounded">Renewables</span>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-xl font-semibold text-gray-800 mb-3">Solar Microgrids for Rural Electrification</h4>
+                <p class="text-gray-600 mb-4">
+                    Zimbabwe has abundant sunshine but many rural areas remain without reliable electricity. Instead of waiting for national grid expansion, we could implement community-owned solar microgrids. This model has worked well in Tanzania and could be adapted for our villages...
+                </p>
+                <div class="flex justify-between items-center">
+                    <div class="flex space-x-4 text-gray-500">
+                        <button class="flex items-center hover:text-yellow-600">
+                            <i class="far fa-comment mr-1"></i>
+                            <span>32</span>
+                        </button>
+                        <button class="flex items-center hover:text-red-500">
+                            <i class="far fa-heart mr-1"></i>
+                            <span>78</span>
+                        </button>
+                        <button class="flex items-center hover:text-blue-500">
+                            <i class="fas fa-share-alt mr-1"></i>
+                        </button>
+                    </div>
+                    <button class="text-yellow-600 hover:text-yellow-700 font-medium">
+                        Read More <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-8">
+                <button class="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-lg font-medium transition">
+                    Load More Discussions
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="bg-yellow-600 py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Ready to Contribute to Zimbabwe's Future?</h3>
+            <p class="text-yellow-100 mb-6 max-w-2xl mx-auto">
+                Join our community of thinkers, professionals, and patriots working together to build a better Zimbabwe.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white hover:bg-gray-100 text-yellow-700 px-6 py-3 rounded-full font-medium transition flex items-center justify-center space-x-2">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Create Free Account</span>
+                </button>
+                <button class="bg-yellow-700 hover:bg-yellow-800 text-white px-6 py-3 rounded-full font-medium transition flex items-center justify-center space-x-2">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Post Anonymously</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">
+                        <span class="text-yellow-400">Zim</span><span class="text-red-400">Forward</span>
+                    </h4>
+                    <p class="text-gray-400 mb-4">
+                        A platform for Zimbabweans to share ideas and collaborate on building a better nation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Sectors</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Healthcare</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Infrastructure</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Education</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Agriculture</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Energy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Resources</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Development Reports</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Policy Papers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Economic Data</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-lg mb-4">Contact</h5>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">info@zimforward.co.zw</li>
+                        <li class="text-gray-400">Harare, Zimbabwe</li>
+                        <li>
+                            <button class="text-gray-400 hover:text-white underline">
+                                Privacy Policy
+                            </button>
+                        </li>
+                        <li>
+                            <button class="text-gray-400 hover:text-white underline">
+                                Terms of Service
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-500">
+                <p>© 2025 ZimForward. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- New Post Modal (Hidden by default) -->
+    <div id="postModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-bold text-gray-800">Create New Post</h3>
+                    <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Display Name (Optional)</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Leave blank to post anonymously">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Title</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="What's your idea about?">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Sector</label>
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                            <option value="">Select a sector</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="infrastructure">Infrastructure</option>
+                            <option value="education">Education</option>
+                            <option value="agriculture">Agriculture</option>
+                            <option value="energy">Energy</option>
+                            <option value="economy">Economy</option>
+                            <option value="technology">Technology</option>
+                            <option value="governance">Governance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Your Idea</label>
+                        <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 h-32" placeholder="Share your thoughts, ideas, or proposals..."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Tags (Optional)</label>
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Add tags separated by commas">
+                    </div>
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" id="cancelPost" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50">
+                            Cancel
+                        </button>
+                        <button type="submit" class="px-6 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg">
+                            Post Idea
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple modal functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const postModal = document.getElementById('postModal');
+            const closeModal = document.getElementById('closeModal');
+            const cancelPost = document.getElementById('cancelPost');
+            const shareIdeaButtons = document.querySelectorAll('button:has(.fa-lightbulb)');
+            
+            // Open modal when clicking any "Share Your Idea" button
+            shareIdeaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    postModal.classList.remove('hidden');
+                });
+            });
+            
+            // Close modal
+            closeModal.addEventListener('click', function() {
+                postModal.classList.add('hidden');
+            });
+            
+            cancelPost.addEventListener('click', function() {
+                postModal.classList.add('hidden');
+            });
+            
+            // Close modal when clicking outside
+            postModal.addEventListener('click', function(e) {
+                if (e.target === postModal) {
+                    postModal.classList.add('hidden');
+                }
+            });
+            
+            // Add animation to post cards when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, {threshold: 0.1});
+            
+            document.querySelectorAll('.post-card').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</html>
